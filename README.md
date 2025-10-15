@@ -275,79 +275,6 @@ results = tester.run_fgsm_sweep(
 print(f"Hijacking rate at ε=0.10: {results['hijack_rate'][0.10]:.2%}")
 ```
 
----
-
-## 📁 Project Structure
-
-```
-emotional-hijacking/
-├── src/
-│   ├── models/
-│   │   ├── mega.py                 # Core MEGA architecture
-│   │   ├── memory_module.py        # Recurrent memory network
-│   │   ├── emotion_module.py       # Valence-arousal encoder
-│   │   ├── gate_module.py          # Attention gating mechanism
-│   │   └── amygdala_module.py      # Dual-pathway processor
-│   │
-│   ├── experiments/
-│   │   ├── E1_memory_gate/
-│   │   │   ├── run_experiment.py
-│   │   │   └── visualize.py
-│   │   ├── E2_adversarial/
-│   │   │   ├── run_fgsm_attack.py
-│   │   │   └── pathway_vulnerability.py
-│   │   ├── E3_bottleneck/
-│   │   │   ├── sweep_beta.py
-│   │   │   └── phase_transition.py
-│   │   ├── E4_competition/
-│   │   │   ├── pathway_competition.py
-│   │   │   └── bias_controller.py
-│   │   └── E5_coupling/
-│   │       ├── noise_sweep.py
-│   │       └── four_body_analysis.py
-│   │
-│   ├── utils/
-│   │   ├── data_generator.py       # Synthetic data creation
-│   │   ├── metrics.py              # Evaluation metrics
-│   │   └── visualization.py        # Plotting utilities
-│   │
-│   └── attacks/
-│       ├── fgsm.py                 # Fast Gradient Sign Method
-│       └── perturbation.py         # Noise injection
-│
-├── experiments/                     # Experimental outputs
-│   ├── E1_memory_gate/             # 13 figures + data
-│   ├── E2_adversarial/             # 2 figures + results
-│   ├── E3_bottleneck/              # 3 figures + phase diagrams
-│   ├── E4_competition/             # 2 figures + traces
-│   └── E5_coupling/                # 7 figures + analysis
-│
-├── figures/                         # Publication-ready visualizations
-│   └── AI-Emotion-Figures/         # All 27 figures
-│
-├── docs/
-│   ├── paper.pdf                   # Full research paper
-│   ├── evidence_appendix.pdf       # Doctoral application supplement
-│   └── API.md                      # Code documentation
-│
-├── notebooks/
-│   ├── 01_quickstart.ipynb         # Tutorial notebook
-│   ├── 02_custom_experiments.ipynb # Template for new experiments
-│   └── 03_analysis.ipynb           # Data analysis examples
-│
-├── tests/
-│   ├── test_models.py
-│   ├── test_experiments.py
-│   └── test_attacks.py
-│
-├── requirements.txt
-├── setup.py
-├── README.md
-└── LICENSE
-```
-
----
-
 ## 📊 Results & Visualizations
 
 All experimental results are organized in the `experiments/` directory with corresponding visualizations.
@@ -501,25 +428,16 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 - Inspired by Joseph LeDoux's dual-pathway amygdala theory
 - FGSM implementation adapted from Goodfellow et al. (2015)
 - Visualization tools built with Matplotlib and Seaborn
-- Computing resources provided by [Your Institution]
+- Computing resources provided by [Zhigang Tian]
 
 ---
 
 ## 📧 Contact
 
 **Primary Author**: Zhigang Tian  
-**Email**: [your.email@institution.edu]  
-**Project Link**: https://github.com/yourusername/emotional-hijacking
+**Email**: [medcloud.ph@gmail.com]  
 
 ---
-
-## 🔗 Related Resources
-
-- [Full Research Paper](docs/paper.pdf)
-- [Evidence Appendix for Doctoral Applications](docs/evidence_appendix.pdf)
-- [Interactive Demo Notebook](notebooks/01_quickstart.ipynb)
-- [API Documentation](docs/API.md)
-
 ---
 
 <p align="center">
